@@ -39,11 +39,11 @@ Call the upload function:
        sa-east-1
        cn-north-1
   */
-  var bucketName = "{bucket_name}}";
-  var destinationFilePath = "{path/inside/bucket/}}";
+  var bucketName = "{bucket_name}";
+  var destinationFilePath = "{path/inside/bucket/}";
   var destinationFileNamePrefix = "{new_file_name}";
-  var accessKey = "{access_key}}";
-  var secretKey = "{secret_key}}";
+  var accessKey = "{access_key}";
+  var secretKey = "{secret_key}";
   var sessionToken = "{session_temporary_token}";
   var deleteFileAfterUpload = "false"; // true, false
   var progressUpdateFunctionName = "app.updateUploadProgress";
