@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.maratstrelets.cordova.aws.s3"
+        version="0.0.1">
+
+  <name>AWSS3</name>
+  <description>Cordova Amazon S3 Plugin</description>
+  <author>Marat Strelets</author>
+	<license>MIT</license>
+	<keywords>aws,s3,upload,transfermanager</keywords>
+  <repo>https://github.com/Devalore/cordova-plugin-aws-s3.git</repo>
+  <issue>https://github.com/Devalore/cordova-plugin-aws-s3/issues</issue>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/s3.js" target="js/s3.js"/>
+
+  <js-module src="www/s3.js" name="s3">
+    <clobbers target="s3" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="AWSS3">
+        <param name="ios-package" value="DCPAmazon" />
+      </feature>
+    </config-file>
+
+    <!-- Sources -->
+    <header-file src="src/ios/DCPAmazon.h"/>
+    <source-file src="src/ios/DCPAmazon.m"/>
+    <header-file src="src/ios/DCPAWSCredentialsProvider.h"/>
+    <source-file src="src/ios/DCPAWSCredentialsProvider.m"/>
+
+    <!-- Resources -->
+    <resource-file src="src/ios/s3-2006-03-01.json"/>
+
+    <!-- iOS Frameworks -->
+    <framework src="libz.dylib" />
+
+    <framework src="src/ios/AWSCore.framework" custom="true" />
+    <framework src="src/ios/AWSS3.framework" custom="true" />
+    <framework src="src/ios/Bolts.framework" custom="true" />
+    <framework src="src/ios/Mantle.framework" custom="true" />
+    <framework src="src/ios/Reachability.framework" custom="true" />
+    <framework src="src/ios/GZIP.framework" custom="true" />
+    <framework src="src/ios/TMCache.framework" custom="true" />
+    <framework src="src/ios/UICKeyChainStore.framework" custom="true" />
+    <framework src="src/ios/XMLDictionary.framework" custom="true" />
+
+
+  </platform>
+
+</plugin>
