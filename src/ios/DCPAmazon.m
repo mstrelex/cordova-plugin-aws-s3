@@ -193,7 +193,7 @@
             NSLog(@"%@", errorMessage);
 
             NSDictionary *jsonObj = @{ @"success"   : @"false",
-                                       @"error"     : [[task.error.userInfo objectForKey:NSUnderlyingErrorKey] localizedDescription]};
+                                       @"error"     : task.error.localizedDescription};
 
             CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus : CDVCommandStatus_ERROR
                                                           messageAsDictionary : jsonObj];
