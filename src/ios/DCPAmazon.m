@@ -155,7 +155,6 @@
 
             NSLog(@"Exec JS function: %@", jsProgressUpdateInvokeString);
 
-            //[self.commandDelegate evalJs:jsProgressUpdateInvokeString];
             [self.webView stringByEvaluatingJavaScriptFromString:jsProgressUpdateInvokeString];
 
         });
@@ -195,7 +194,7 @@
 
             NSDictionary *jsonObj = @{ @"success"   : @"false",
                                        @"error"     : [[task.error.userInfo objectForKey:NSUnderlyingErrorKey] localizedDescription]};
-                                       
+
             CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus : CDVCommandStatus_ERROR
                                                           messageAsDictionary : jsonObj];
             [self.commandDelegate sendPluginResult:pluginResult callbackId:callbackId];

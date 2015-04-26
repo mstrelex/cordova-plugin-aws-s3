@@ -8,8 +8,8 @@
   <author>Marat Strelets</author>
 	<license>MIT</license>
 	<keywords>aws,s3,upload,transfermanager</keywords>
-  <repo>https://github.com/Devalore/cordova-plugin-aws-s3.git</repo>
-  <issue>https://github.com/Devalore/cordova-plugin-aws-s3/issues</issue>
+  <repo>https://github.com/mstrelex/cordova-plugin-aws-s3.git</repo>
+  <issue>https://github.com/mstrelex/cordova-plugin-aws-s3/issues</issue>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
